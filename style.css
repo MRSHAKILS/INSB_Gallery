@@ -1,0 +1,14 @@
+/* Styles for the gallery */
+.gallery-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.gallery-item {
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0; 
+}
