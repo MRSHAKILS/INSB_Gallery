@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+            <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
+            <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+        </div>
+        <div class="tab-content">
+            <div id="tab1" class="tabcontent">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div id="tab2" class="tabcontent">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div id="tab3" class="tabcontent">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+    
+    </div>
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wDv1SA24R08?si=l9pyL2ZMJEJGi0e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+    <script >
+        // Function to open a specific tab and display its content
+function openTab(evt, tabName) {
+    // Get all elements with class "tabcontent" and hide them
+    var tabcontents = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].style.display = "none";
+    }
+
+    // Get all elements with class "tablinks" and remove the "active" class
+    var tablinks = document.getElementsByClassName("tablinks");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Show the selected tab and set the button as active
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
+
+// Open the default tab on page load (e.g., the first tab)
+document.getElementsByClassName("tablinks")[0].click();
+
+    </script>
+</body>
+</html>
